@@ -2,33 +2,33 @@ package main
 
 import "fmt"
 
-type Person struct {
-	Name string
-	Age  int
+type Pessoa struct {
+	Nome string
+	Idade  int
 }
 
-func (p *Person) String() string {
-	if p.Age < 18 {
-		return fmt.Sprintf("Olá jovem %s, seja bem vindo", p.Name)
-	} else if p.Age > 50 {
-		return fmt.Sprintf("Olá senhor %s, seja bem vindo", p.Name)
+func (p *Pessoa) String() string {
+	if p.Idade < 18 {
+		return fmt.Sprintf("Olá jovem %s, seja bem vindo", p.Nome)
+	} else if p.Idade > 50 {
+		return fmt.Sprintf("Olá senhor %s, seja bem vindo", p.Nome)
 	}
 
-	return fmt.Sprintf("Olá %s, seja bem vindo", p.Name)
+	return fmt.Sprintf("Olá %s, seja bem vindo", p.Nome)
 }
 
-func (p *Person) privateMethod() int {
-	return p.Age * 4
+func (p *Pessoa) privateMethod() int {
+	return p.Idade * 4
 }
 
 func main() {
-	person := Person{Name: "júnior", Age: 17}
+	pessoa := Pessoa{Nome: "júnior", Idade: 17}
+	fmt.Println(pessoa.String())
+
+	pessoa = Pessoa{Nome: "Wilson", Idade: 27}
 	fmt.Println(person.String())
 
-	person = Person{Name: "Wilson", Age: 27}
-	fmt.Println(person.String())
-
-	person = Person{Name: "Antônio", Age: 60}
+	pessoa = Pessoa{Nome: "Antônio", Idade: 60}
 	fmt.Println(person.String())
 
 }
