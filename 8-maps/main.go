@@ -3,17 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	people := map[string]int{
+	pessoas := map[string]int{
 		"wilson": 25,
 		"andre":  26,
 	}
 
-	people["junior"] = 10
+	pessoas["junior"] = 10
 
-	for name, age := range people {
-		fmt.Printf("Chave %s do mapa valor: %d\n", name, age)
+	for nome, idade := range pessoas {
+		fmt.Printf("Chave %s do mapa valor: %d\n", nome, idade)
 	}
 
-	delete(people, "wilson")
-	fmt.Printf("Posição não alocada: %d\n", people["wilson"])
+	delete(pessoas, "wilson")
+	fmt.Printf("Posição não alocada: %d\n", pessoas["wilson"])
 }

@@ -2,19 +2,19 @@ package main
 
 import "fmt"
 
-type Person struct {
-	Name   string
-	Age    int
-	Active bool
+type Pessoa struct {
+	Nome   string
+	Idade    int
+	Ativo bool
 }
 
 func main() {
-	p := Person{
-		Name:   "Wilson Júnior",
-		Age:    24,
-		Active: true,
+	p := Pessoa{
+		Nome:   "Wilson Júnior",
+		Idade:    24,
+		Ativo: true,
 	}
-	fmt.Println("Nome", p.Name)
-	fmt.Println("Age", p.Age)
-	fmt.Println("Active", p.Active)
+	fmt.Println("Nome", p.Nome)
+	fmt.Println("Idade", p.Idade)
+	fmt.Println("Ativo", p.Ativo)
 }

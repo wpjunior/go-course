@@ -3,31 +3,31 @@ package main
 import "fmt"
 
 type Animal interface {
-	Shout() string
+	Gritar() string
 }
 
-type Cow struct{}
+type Vaca struct{}
 
-func (c *Cow) Shout() string {
+func (c *Vaca) Gritar() string {
 	return "Muuu"
 }
 
-type Dog struct{}
+type Cachorro struct{}
 
-func (d *Dog) Shout() string {
+func (d *Cachorro) Gritar() string {
 	return "Rau rau!"
 }
 
 func main() {
 	var animal Animal
 
-	animal = &Cow{}
-	callMyAnimal(animal)
+	animal = &Vaca{}
+	chamarMeuAnimal(animal)
 
-	animal = &Dog{}
-	callMyAnimal(animal)
+	animal = &Cachorro{}
+	chamarMeuAnimal(animal)
 }
 
-func callMyAnimal(a Animal) {
-	fmt.Println("My animal says:", a.Shout())
+func chamarMeuAnimal(a Animal) {
+	fmt.Println("Meu animal diz:", a.Gritar())
 }
